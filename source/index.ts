@@ -1,3 +1,5 @@
-let msg: string = "Hello, world!"
+import * as R from 'ramda';
 
-console.log(msg);
+const greet = R.replace('{name}', R.__, "Hello, {name}!")
+
+console.log(greet('world'));
