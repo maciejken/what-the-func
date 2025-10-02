@@ -6,10 +6,11 @@ export const empty = 0;
 export const black = -1;
 export const white = 1;
 
-export type color = typeof black | typeof white;
-export type move = [number, number, color];
+export type Color = typeof black | typeof white;
 // let pass: move - with coordinates outside the board
-export type value = typeof empty | color;
-export type board = value[][];
+// let resign: move - with more than one stone
+export type Move = [number, number, Color | Color[]];
+export type Value = typeof empty | Color;
+export type Board = Value[][];
 
-export const validate = ([x, y, color]: move, board: value[][]): boolean => true;
+export const validate = ([x, y, color]: Move, board: Board): boolean => true;
