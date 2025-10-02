@@ -7,7 +7,7 @@ export const black = -1;
 export const white = 1;
 
 export type Color = typeof black | typeof white;
-// let pass: move - with coordinates outside the board
+// let pass: move - with NaN coordinates
 // let resign: move - with more than one stone
 export type Move = [number, number, Color | Color[]];
 export type Value = typeof empty | Color;
