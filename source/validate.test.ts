@@ -82,7 +82,7 @@ describe('validate', () => {
       [_, o, _, _, _],
     ];
 
-    expect(validate([0, 0, x], board)).toBe(false);
+    expect(validate([0, 4, x], board)).toBe(false);
   });
 
   it('returns true if black stone is put on one-point white eye in on first line surrounded by black stones', () => {
@@ -106,7 +106,7 @@ describe('validate', () => {
       [x, x, x, x, x],
     ];
 
-    expect(validate([0, 2, x], board)).toBe(true);
+    expect(validate([2, 2, x], board)).toBe(true);
   });
 
   it('returns true if black passes', () => {
